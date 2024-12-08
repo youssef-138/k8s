@@ -31,13 +31,8 @@ spec:
             limits:
               memory: "1Gi"   # Limit memory to 1 GiB
               cpu: "1"        # Limit CPU usage to 1 core
-  volumeClaimTemplates:
-    - metadata:
-        name: mongodb-storage
-      spec:
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 10Gi  # Persistent storage size
-        storageClassName: ebs-sc  # Name of your StorageClass
+
+      volumes:
+        - name: mongodb-storage
+          persistentVolumeClaim:
+            claimName: ebs-pvc
