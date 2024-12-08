@@ -3,5 +3,5 @@ kind: StorageClass
 metadata:
   name: ebs-sc
 provisioner: ebs.csi.aws.com
-volumeBindingMode: WaitForFirstConsume  # Can be set to 'WaitForFirstConsumer' if preferred
+volumeBindingMode: WaitForFirstConsumer  # Can be set to 'WaitForFirstConsumer' if preferred
 
