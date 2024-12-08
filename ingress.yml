@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: 
+  - host: lb-pink-419992438.eu-central-1.elb.amazonaws.com
     http:
       paths:
       - path: /frontend

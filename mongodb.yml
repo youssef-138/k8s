@@ -24,6 +24,14 @@ spec:
           volumeMounts:
             - name: mongodb-storage
               mountPath: /data/db
+          resources:
+          requests:
+            memory: "64Mi"  # Request 64 MiB of memory
+            cpu: "100m"     # Request 100 milliCPU (0.1 CPU)
+          limits:
+            memory: "1Gi"   # Limit memory to 1 GiB
+            cpu: "1"        # Limit CPU usage to 1 core
+
       volumes:
         - name: mongodb-storage
           persistentVolumeClaim:
